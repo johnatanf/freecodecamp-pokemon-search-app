@@ -86,7 +86,7 @@ async function populateFields(searchString) {
         const specialDefenseField = document.getElementById('special-defense')
         const speedField = document.getElementById('speed')
 
-        for(item of data.stats) {
+        for(let item of data.stats) {
             switch(item.stat.name) {
                 case 'attack':
                     attack = item.base_stat
@@ -132,7 +132,6 @@ async function populateFields(searchString) {
 async function searchButtonClick() {
     const inputField = document.getElementById('search-input')
     const searchString = inputField.value.toLowerCase()
-
     await populateFields(searchString)
 }
 
