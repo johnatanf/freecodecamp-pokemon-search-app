@@ -1,3 +1,5 @@
+initialiseApp()
+
 async function retrieveData(searchString) {
     try {
         const response = await fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${searchString}`)
@@ -126,4 +128,17 @@ async function populateFields(searchString) {
     } else {
         alert("Pokémon not found")
     }
+}
+
+async function searchButtonClick() {
+    const inputField = document.getElementById('search-input')
+    const searchString = inputField.value
+
+    await populateFields(searchString)
+}
+
+function initialiseApp() {
+    const searchButton = document.getElementById('search-button')
+
+    searchButton.addEventListener('click', searchButtonClick)
 }
