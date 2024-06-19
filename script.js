@@ -38,7 +38,7 @@ function clearFields() {
 function createTypesHTML(arr) {
     let finalHTML = ""
     
-    for(item of arr) {
+    for(let item of arr) {
         finalHTML = finalHTML.concat(`<li class="type">${item.toUpperCase()}</li>`)
     }
 
