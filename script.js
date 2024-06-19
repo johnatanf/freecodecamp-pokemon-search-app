@@ -10,3 +10,26 @@ async function retrieveData(searchString) {
         return { error: error.message }
     }
 }
+
+function clearFields() {
+    const fields = [
+        'search-input',
+        'search-button',
+        'pokemon-name',
+        'pokemon-id',
+        'weight',
+        'height',
+        'types',
+        'hp',
+        'attack',
+        'defense',
+        'special-attack',
+        'special-defense',
+        'speed'
+    ]
+
+    for(let field of fields) {
+        let currentEl = document.getElementById(field)
+        currentEl.innerHTML = ""
+    }
+}
