@@ -7,49 +7,54 @@
     <title>Pokemon Search App</title>
 </head>
 <body>
-    <input id="search-input" type="text" required>
-    <button id="search-button">Search</button>
-    <div id="pokemon-summary-container">
-        <p class="pokemon-heading"><span id="pokemon-name">Pokemon name</span>&nbsp;<span id="pokemon-id">#12</span></p>
-        <p class="pokemon-height-weight">
-            <span>Weight:&nbsp;<span id="weight"></span></span>
-            <span>Height:&nbsp;<span id="height">Height</span></span>
-        </p>
-        <div id="img-container"></div>
-        <ul id="types">
-            <li class="type">Type #1</li>
-        </ul>
+    <div id="app-container">
+        <form id="input-container" action="">
+            <label class="label" for="search-input">Search for Pokémon Name or ID:</label>
+            <input id="search-input" type="text" required>
+            <button id="search-button" class="btn">Search</button>
+        </form>
+        <div id="pokemon-summary-container">
+            <p class="pokemon-heading"><span id="pokemon-name">Pokemon name</span>&nbsp;<span id="pokemon-id">#12</span></p>
+            <p class="pokemon-height-weight">
+                <span>Weight:&nbsp;<span id="weight"></span></span>
+                <span>Height:&nbsp;<span id="height">Height</span></span>
+            </p>
+            <div id="img-container"></div>
+            <ul id="types">
+                <li class="type">Type #1</li>
+            </ul>
+        </div>
+        <table id="stats-table">
+            <thead>
+                <th>Base</th>
+                <th>Stats</th>
+            </thead>
+            <tr>
+                <td>HP:</td>
+                <td id="hp"></td>
+            </tr>
+            <tr>
+                <td>Attack:</td>
+                <td id="attack"></td>
+            </tr>
+            <tr>
+                <td>Defense:</td>
+                <td id="defense"></td>
+            </tr>
+            <tr>
+                <td>Sp. Attack:</td>
+                <td id="special-attack"></td>
+            </tr>
+            <tr>
+                <td>Sp. Defense:</td>
+                <td id="special-defense"></td>
+            </tr>
+            <tr>
+                <td>Speed:</td>
+                <td id="speed"></td>
+            </tr>
+        </table>
     </div>
-    <table>
-        <thead>
-            <th>Base</th>
-            <th>Stats</th>
-        </thead>
-        <tr>
-            <td>HP:</td>
-            <td id="hp"></td>
-        </tr>
-        <tr>
-            <td>Attack:</td>
-            <td id="attack"></td>
-        </tr>
-        <tr>
-            <td>Defense:</td>
-            <td id="defense"></td>
-        </tr>
-        <tr>
-            <td>Sp. Attack:</td>
-            <td id="special-attack"></td>
-        </tr>
-        <tr>
-            <td>Sp. Defense:</td>
-            <td id="special-defense"></td>
-        </tr>
-        <tr>
-            <td>Speed:</td>
-            <td id="speed"></td>
-        </tr>
-    </table>
 
     <script src="./script.js"></script>
 </body>

@@ -63,7 +63,7 @@ async function populateFields(searchString) {
     if(!data.error) {
         let pokemonPictureUrl = data.sprites.front_default
         let pokemonName = data.name.toUpperCase()
-        let pokemonId = data.id
+        let pokemonId = `#${data.id}`
         let weight = data.weight
         let height = data.height
         let types = data.types.map(item => item.type.name)
