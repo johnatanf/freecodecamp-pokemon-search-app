@@ -39,7 +39,7 @@ function createTypesHTML(arr) {
     let finalHTML = ""
     
     for(item of arr) {
-        finalHTML = finalHTML.concat(`<li class="type">${item}</li>`)
+        finalHTML = finalHTML.concat(`<li class="type">${item.toUpperCase()}</li>`)
     }
 
     return finalHTML
