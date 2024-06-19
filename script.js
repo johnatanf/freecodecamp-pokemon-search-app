@@ -44,11 +44,23 @@ function createTypesHTML(arr) {
     return finalHTML
 }
 
+function createImgElement(url) {
+    const imgContainer = document.getElementById('img-container')
+    const imgElement = document.createElement('img')
+    
+    imgElement.id = "sprite"
+    imgElement.src = url
+    imgElement.alt = "pokemon picture"
+
+    imgContainer.appendChild(imgElement)
+}
+
 async function populateFields(searchString) {
     const data = await retrieveData(searchString)
     clearFields()
 
     if(!data.error) {
+        let pokemonPictureUrl = data.sprites.front_default
         let pokemonName = data.name
         let pokemonId = data.id
         let weight = data.weight
@@ -108,6 +120,8 @@ async function populateFields(searchString) {
         specialAttackField.innerHTML = specialAttack
         specialDefenseField.innerHTML = specialDefense
         speedField.innerHTML = speed
+
+        createImgElement(pokemonPictureUrl)
         
     } else {
         alert("Pokémon not found")
