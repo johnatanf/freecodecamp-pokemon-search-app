@@ -28,6 +28,7 @@ td, th {
     box-sizing: border-box;
     margin: 0 auto;
     padding: 20px 30px;
+    max-width: 500px;
 }
 
 #input-container {
@@ -54,8 +55,13 @@ td, th {
     border-radius: 0.5rem;
 }
 
+.btn:hover {
+    background: #007686b6;
+}
+
 .label {
     text-align: center;
+    font-size: 1.75rem;
 }
 
 #pokemon-summary-container {
