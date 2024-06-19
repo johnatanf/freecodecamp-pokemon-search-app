@@ -25,7 +25,8 @@ function clearFields() {
         'defense',
         'special-attack',
         'special-defense',
-        'speed'
+        'speed',
+        'img-container'
     ]
 
     for(let field of fields) {
