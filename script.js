@@ -15,7 +15,6 @@ async function retrieveData(searchString) {
 
 function clearFields() {
     const fields = [
-        'search-input',
         'pokemon-name',
         'pokemon-id',
         'weight',
