@@ -131,7 +131,7 @@ async function populateFields(searchString) {
 
 async function searchButtonClick() {
     const inputField = document.getElementById('search-input')
-    const searchString = inputField.value
+    const searchString = inputField.value.toLowerCase()
 
     await populateFields(searchString)
 }
