@@ -129,15 +129,16 @@ async function populateFields(searchString) {
     }
 }
 
-async function searchButtonClick() {
+async function searchButtonClick(event) {
+    event.preventDefault()
     const inputField = document.getElementById('search-input')
     const searchString = inputField.value.toLowerCase()
     await populateFields(searchString)
 }
 
 function initialiseApp() {
-    const searchButton = document.getElementById('search-button')
+    const inputForm = document.getElementById('input-container')
 
-    searchButton.addEventListener('click', searchButtonClick)
+    inputForm.addEventListener('submit', searchButtonClick)
     clearFields()
 }
