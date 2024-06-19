@@ -7,7 +7,46 @@
     <title>Pokemon Search App</title>
 </head>
 <body>
-    
+    <input id="search-input" type="text">
+    <button id="search-button">Search</button>
+    <div id="pokemon-summary-container">
+        <p class="pokemon-heading"><span id="pokemon-name">Pokemon name</span>&nbsp;<span id="pokemon-id">#12</span></p>
+        <p class="pokemon-height-weight"><span id="weight">Weight</span><span id="height">Height</span></p>
+        <ul id="types">
+            <li class="type">Type #1</li>
+        </ul>
+    </div>
+    <table>
+        <thead>
+            <th>Base</th>
+            <th>Stats</th>
+        </thead>
+        <tr>
+            <td>HP:</td>
+            <td><p id="hp">HP value</p></td>
+        </tr>
+        <tr>
+            <td>Attack:</td>
+            <td><p id="attack">Attack value</p></td>
+        </tr>
+        <tr>
+            <td>Defense:</td>
+            <td><p id="defense">Defense value</p></td>
+        </tr>
+        <tr>
+            <td>Sp. Attack:</td>
+            <td><p id="special-attack">Special Attack value</p></td>
+        </tr>
+        <tr>
+            <td>Sp. Defense:</td>
+            <td><p id="special-defense">Special Defense value</p></td>
+        </tr>
+        <tr>
+            <td>Speed:</td>
+            <td><p id="speed">Speed value</p></td>
+        </tr>
+    </table>
+
     <script src="./script.js"></script>
 </body>
 </html>
